@@ -1,0 +1,144 @@
+04 May 2018 04:54:46,859 [DEBUG] [Eureka-JerseyClient-Conn-Cleaner2] MonitoredConnectionManager| Closing connections idle longer than -1 SECONDS
+04 May 2018 04:54:46,859 [DEBUG] [Eureka-JerseyClient-Conn-Cleaner2] NamedConnectionPool      | Closing connections idle longer than 0 SECONDS
+04 May 2018 04:54:46,859 [DEBUG] [Eureka-JerseyClient-Conn-Cleaner2] NamedConnectionPool      | Closing connection last used @ Fri May 04 04:54:28 UTC 2018
+04 May 2018 04:54:46,859 [DEBUG] [Eureka-JerseyClient-Conn-Cleaner2] NamedConnectionPool      | Deleting connection [{}->http://172.16.205.119:8080][null]
+04 May 2018 04:54:46,874 [DEBUG] [Eureka-JerseyClient-Conn-Cleaner2] MonitoredConnectionManager| Closing connections idle longer than 30000 SECONDS
+04 May 2018 04:54:46,874 [DEBUG] [Eureka-JerseyClient-Conn-Cleaner2] NamedConnectionPool      | Closing connections idle longer than 30000 SECONDS
+2018-05-04T04:54:46.925+0000: 23918.565: Total time for which application threads were stopped: 0.0013314 seconds, Stopping threads took: 0.0001773 seconds
+2018-05-04T04:54:46.926+0000: 23918.567: Total time for which application threads were stopped: 0.0009751 seconds, Stopping threads took: 0.0000565 seconds
+2018-05-04T04:54:46.928+0000: 23918.568: Total time for which application threads were stopped: 0.0010395 seconds, Stopping threads took: 0.0000708 seconds
+04 May 2018 04:54:46,929 [DEBUG] [okhttp-eventsource-stream-[]-0] [ ctx=-;-; ] EventSource.             | Connection problem.
+java.net.SocketTimeoutException: timeout
+	at okio.Okio$3.newTimeoutException(Okio.java:212)
+	at okio.AsyncTimeout.exit(AsyncTimeout.java:288)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:242)
+	at okio.RealBufferedSource.request(RealBufferedSource.java:66)
+	at okio.RealBufferedSource.require(RealBufferedSource.java:59)
+	at okio.RealBufferedSource.readHexadecimalUnsignedLong(RealBufferedSource.java:284)
+	at okhttp3.internal.http.Http1xStream$ChunkedSource.readChunkSize(Http1xStream.java:441)
+	at okhttp3.internal.http.Http1xStream$ChunkedSource.read(Http1xStream.java:422)
+	at okio.RealBufferedSource.read(RealBufferedSource.java:45)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:325)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:314)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:210)
+	at com.launchdarkly.eventsource.EventSource.connect(EventSource.java:207)
+	at com.launchdarkly.eventsource.EventSource.access$1000(EventSource.java:43)
+	at com.launchdarkly.eventsource.EventSource$2.run(EventSource.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.read(SocketInputStream.java:204)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at okio.Okio$2.read(Okio.java:140)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:238)
+	... 15 more
+04 May 2018 04:54:46,929 [DEBUG] [okhttp-eventsource-stream-[]-0] [ ctx=-;-; ] EventSource.             | readyState change: OPEN -> CLOSED
+04 May 2018 04:54:46,929 [DEBUG] [okhttp-eventsource-stream-[]-0] [ ctx=-;-; ] EventSource.             | response closed
+04 May 2018 04:54:46,929 [DEBUG] [okhttp-eventsource-stream-[]-0] [ ctx=-;-; ] EventSource.             | buffered source closed
+04 May 2018 04:54:46,929 [INFO ] [okhttp-eventsource-stream-[]-0] [ ctx=-;-; ] EventSource.             | Waiting 20464 milliseconds before reconnecting...
+04 May 2018 04:54:46,930 [ERROR] [okhttp-eventsource-events-[]-0] [ ctx=-;-; ] StreamProcessor          | Encountered EventSource error: timeout
+04 May 2018 04:54:46,930 [DEBUG] [okhttp-eventsource-events-[]-0] [ ctx=-;-; ] StreamProcessor          | 
+java.net.SocketTimeoutException: timeout
+	at okio.Okio$3.newTimeoutException(Okio.java:212)
+	at okio.AsyncTimeout.exit(AsyncTimeout.java:288)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:242)
+	at okio.RealBufferedSource.request(RealBufferedSource.java:66)
+	at okio.RealBufferedSource.require(RealBufferedSource.java:59)
+	at okio.RealBufferedSource.readHexadecimalUnsignedLong(RealBufferedSource.java:284)
+	at okhttp3.internal.http.Http1xStream$ChunkedSource.readChunkSize(Http1xStream.java:441)
+	at okhttp3.internal.http.Http1xStream$ChunkedSource.read(Http1xStream.java:422)
+	at okio.RealBufferedSource.read(RealBufferedSource.java:45)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:325)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:314)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:210)
+	at com.launchdarkly.eventsource.EventSource.connect(EventSource.java:207)
+	at com.launchdarkly.eventsource.EventSource.access$1000(EventSource.java:43)
+	at com.launchdarkly.eventsource.EventSource$2.run(EventSource.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.read(SocketInputStream.java:204)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at okio.Okio$2.read(Okio.java:140)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:238)
+	... 15 more
+2018-05-04T04:54:47.423+0000: 23919.063: Total time for which application threads were stopped: 0.0016314 seconds, Stopping threads took: 0.0002082 seconds
+2018-05-04T04:54:47.804+0000: 23919.444: Total time for which application threads were stopped: 0.0016693 seconds, Stopping threads took: 0.0001974 seconds
+2018-05-04T04:54:47.805+0000: 23919.445: Total time for which application threads were stopped: 0.0009233 seconds, Stopping threads took: 0.0000999 seconds
+2018-05-04T04:54:47.807+0000: 23919.447: Total time for which application threads were stopped: 0.0012467 seconds, Stopping threads took: 0.0001729 seconds
+04 May 2018 04:54:47,807 [DEBUG] [okhttp-eventsource-stream-[]-0] [ ctx=-;-; ] EventSource.             | Connection problem.
+java.net.SocketTimeoutException: timeout
+	at okio.Okio$3.newTimeoutException(Okio.java:212)
+	at okio.AsyncTimeout.exit(AsyncTimeout.java:288)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:242)
+	at okio.RealBufferedSource.request(RealBufferedSource.java:66)
+	at okio.RealBufferedSource.require(RealBufferedSource.java:59)
+	at okio.RealBufferedSource.readHexadecimalUnsignedLong(RealBufferedSource.java:284)
+	at okhttp3.internal.http.Http1xStream$ChunkedSource.readChunkSize(Http1xStream.java:441)
+	at okhttp3.internal.http.Http1xStream$ChunkedSource.read(Http1xStream.java:422)
+	at okio.RealBufferedSource.read(RealBufferedSource.java:45)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:325)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:314)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:210)
+	at com.launchdarkly.eventsource.EventSource.connect(EventSource.java:207)
+	at com.launchdarkly.eventsource.EventSource.access$1000(EventSource.java:43)
+	at com.launchdarkly.eventsource.EventSource$2.run(EventSource.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.read(SocketInputStream.java:204)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at okio.Okio$2.read(Okio.java:140)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:238)
+	... 15 more
+04 May 2018 04:54:47,808 [DEBUG] [okhttp-eventsource-stream-[]-0] [ ctx=-;-; ] EventSource.             | readyState change: OPEN -> CLOSED
+04 May 2018 04:54:47,808 [ERROR] [okhttp-eventsource-events-[]-0] [ ctx=-;-; ] StreamProcessor          | Encountered EventSource error: timeout
+04 May 2018 04:54:47,808 [DEBUG] [okhttp-eventsource-events-[]-0] [ ctx=-;-; ] StreamProcessor          | 
+java.net.SocketTimeoutException: timeout
+	at okio.Okio$3.newTimeoutException(Okio.java:212)
+	at okio.AsyncTimeout.exit(AsyncTimeout.java:288)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:242)
+	at okio.RealBufferedSource.request(RealBufferedSource.java:66)
+	at okio.RealBufferedSource.require(RealBufferedSource.java:59)
+	at okio.RealBufferedSource.readHexadecimalUnsignedLong(RealBufferedSource.java:284)
+	at okhttp3.internal.http.Http1xStream$ChunkedSource.readChunkSize(Http1xStream.java:441)
+	at okhttp3.internal.http.Http1xStream$ChunkedSource.read(Http1xStream.java:422)
+	at okio.RealBufferedSource.read(RealBufferedSource.java:45)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:325)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.java:314)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:210)
+	at com.launchdarkly.eventsource.EventSource.connect(EventSource.java:207)
+	at com.launchdarkly.eventsource.EventSource.access$1000(EventSource.java:43)
+	at com.launchdarkly.eventsource.EventSource$2.run(EventSource.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.read(SocketInputStream.java:204)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at okio.Okio$2.read(Okio.java:140)
+	at okio.AsyncTimeout$2.read(AsyncTimeout.java:238)
+	... 15 more
